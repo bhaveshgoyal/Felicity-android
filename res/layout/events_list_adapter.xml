@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="?android:attr/listPreferredItemHeightLarge">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:padding="8dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp" >
+ 
+    
+ 
+           <app.and.felicity.CircularImageView
+                android:id="@+id/cir_events_thumb"
+                android:layout_width="?android:attr/listPreferredItemHeightSmall"
+                android:layout_height="?android:attr/listPreferredItemHeightSmall"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/threads_back"
+                app:border_color="#FFFFFF"
+                app:border_width="4dp"
+                app:shadow="true" />
+           
+    <!-- Event Title -->
+    <TextView
+        android:id="@+id/event_title"
+        android:text="Gordian Knot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/cir_events_thumb"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+ 
+    <!-- Dates -->
+    <TextView
+        android:text="17-1-15"
+        android:id="@+id/schedule_item_dates"
+        android:textStyle="italic"
+        android:textColor="#3a3a3a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_title"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/rating" />
+      
+</RelativeLayout>
+
+</FrameLayout>

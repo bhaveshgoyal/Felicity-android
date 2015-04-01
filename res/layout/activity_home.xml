@@ -1,0 +1,440 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="app.and.felicity.HomeActivity" >
+
+    <!--
+         <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    -->
+ <app.and.felicity.ParallaxImageView 
+     android:layout_width= "fill_parent"
+     android:id="@+id/backgroundimg"
+     android:layout_height="match_parent"
+     android:src="@drawable/stars_fel1"
+     android:scaleType="fitXY" />
+     
+    <GridLayout
+        android:id="@+id/homecircles"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:columnCount="2"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" 
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cir_events"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/events_back"
+                app:border_color="#FFFFFF"
+                app:border_width="4dp"
+                app:shadow="true" />
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cir_events"
+                android:layout_centerHorizontal="true"
+                android:text="Events"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            >
+
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cir_about"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/about_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cir_about"
+                android:layout_centerHorizontal="true"
+                android:text="About"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+            android:layout_gravity="left" 
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cir_schedule"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/schedule_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cir_schedule"
+                android:layout_centerHorizontal="true"
+                android:text="Schedule"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+      
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+                android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cir_nights"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/nights_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cir_nights"
+                android:layout_centerHorizontal="true"
+                android:text="Major Nights"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+            android:layout_gravity="left" 
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cir_sponsors"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/sponsors_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cir_sponsors"
+                android:layout_centerHorizontal="true"
+                android:text="Sponsors"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+      
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+                android:layout_gravity="right"
+            
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cir_contact"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/contact_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cir_contact"
+                android:layout_centerHorizontal="true"
+                android:text="Contact"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </GridLayout>
+
+    
+    
+    <!-- Code For Schedule goes Here -->
+    <LinearLayout
+        android:background="@drawable/layout_round"
+        android:id="@+id/inflated_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <ListView
+            android:id="@+id/schedule_list_view"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample Code" />
+
+    </LinearLayout>
+    
+        <!--  Code For About us goes here -->
+        <!-- 
+         <LinearLayout
+        android:background="@drawable/layout_round"
+        android:id="@+id/inflated_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+        
+        <GridLayout 
+            
+            android:id="@+id/about_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+        	android:columnCount="3"
+        	android:orientation="horizontal" 
+            >
+            <LinearLayout 
+                android:id="@+id/about_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:background="@drawable/card_background"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="#FFFFFF"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="Junai\nAhmed" />
+         <TextView
+             
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="junaid@felicity.iiit.ac.in" />
+          <TextView
+              
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91-9642084724" />
+        </LinearLayout>	
+            
+            <LinearLayout 
+           android:background="@drawable/andro_circle"
+                       android:textColor="#FFFFFF"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:orientation="vertical" >
+        <TextView
+            
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rohan\nBhatial" />
+          <TextView
+             
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rohan@felicity.iiit.ac.in" />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91-8179749049" />
+         </LinearLayout>	
+            <LinearLayout 
+                
+            	android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+        <TextView
+            
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muralidhar\nKonda" />
+          <TextView
+             
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="murali@felicity.iiit.ac.in" />
+          <TextView
+              
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91-9052907202" />
+       </LinearLayout>	
+   <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website\nQueries" />
+        </LinearLayout>	
+   <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Threads\nQueries" />
+        </LinearLayout>	
+        <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pulsation\nQueries" />
+        </LinearLayout>	
+        <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nights\nQueries" />
+        </LinearLayout>	
+        <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalakshetra\nQueries" />
+        </LinearLayout>	
+        <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lit Cafe\nQueries" />
+             </LinearLayout>	
+        <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        
+        <TextView
+            android:background="@drawable/andro_circle"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZombieZone\nQueries" />
+        </LinearLayout>	
+        <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sponsorship\nQueries" />
+        </LinearLayout>	
+        <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stall\nQueries" />
+        </LinearLayout>	       
+   </GridLayout>
+    
+    </LinearLayout>
+    -->
+        <LinearLayout
+        android:background="@drawable/layout_round"
+        android:id="@+id/inflated_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <ListView
+            android:id="@+id/list_about"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample Code" />
+
+    </LinearLayout>
+    
+        <LinearLayout
+        android:background="@drawable/layout_round"
+        android:id="@+id/inflated_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/info_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Annual Fest of IIIT-H" />
+
+    </LinearLayout>
+    
+<!--      </ScrollView> -->
+
+</FrameLayout>

@@ -1,0 +1,276 @@
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/events_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="app.and.felicity.HomeActivity">
+
+<FrameLayout 
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="app.and.felicity.HomeActivity" >
+
+    
+ <app.and.felicity.ParallaxImageView 
+     android:layout_width= "fill_parent"
+     android:id="@+id/backgroundimg"
+     android:layout_height="match_parent"
+     android:src="@drawable/backimg"
+     android:scaleType="fitXY" />
+     
+    <GridLayout
+        android:id="@+id/homecircles"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:columnCount="2"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" 
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cir_talks"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo"
+                app:border_color="#FFFFFF"
+                app:border_width="4dp"
+                app:shadow="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cir_talks"
+                android:layout_centerHorizontal="true"
+                android:text="Talks n' Workshops"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            >
+
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/threads"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/threads_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/threads"
+                android:layout_centerHorizontal="true"
+                android:text="Threads"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+            android:layout_gravity="left" 
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/pulsation"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pulsation_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pulsation"
+                android:layout_centerHorizontal="true"
+                android:text="Pulsation"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+      
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+                android:layout_gravity="right"
+            
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cult"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/cult_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cult"
+                android:layout_centerHorizontal="true"
+                android:text="Cultural Colosseum"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+               android:layout_gravity="left" 
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/cafe"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cafe"
+                android:layout_centerHorizontal="true"
+                android:text="Literary Cafe"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+      
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+                android:layout_gravity="right"
+            
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/kalakshetra"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kalakshetra"
+                android:layout_centerHorizontal="true"
+                android:text="Kalakshetra"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    
+                <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+                android:layout_gravity="right"
+            
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/zombie"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/zombie"
+                android:layout_centerHorizontal="true"
+                android:text="Zombie Zone"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+        
+                <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <app.and.felicity.CircularImageView
+                android:id="@+id/misc"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/contact_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/misc"
+                android:layout_centerHorizontal="true"
+                android:text="Misc."
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </GridLayout>
+    
+    
+    <!-- Code For About Us goes Here -->
+    <LinearLayout
+        android:background="@drawable/layout_round"
+        android:id="@+id/inflated_about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <TextView
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample Code" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Text here" />
+    </LinearLayout>
+    
+    
+    <!-- Code For Schedule goes Here -->
+    <LinearLayout
+        android:background="@drawable/layout_round"
+        android:id="@+id/inflated_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <ListView
+            android:id="@+id/schedule_list_view"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:layout_height="wrap_content"
+            android:text="Sample Code" />
+
+    </LinearLayout>
+    
+        
+
+<!--      </ScrollView> -->
+
+</FrameLayout>
+</ScrollView>

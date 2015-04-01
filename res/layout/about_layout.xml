@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="?android:attr/listPreferredItemHeightLarge">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+   
+    android:background="@drawable/card_background"
+    android:padding="8dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp" >
+ 
+    
+ <!--  Add Gif if required -->
+         <!--   <app.and.felicity.CircularImageView
+                android:id="@+id/cir_events_thumb"
+                android:layout_width="?android:attr/listPreferredItemHeightSmall"
+                android:layout_height="?android:attr/listPreferredItemHeightSmall"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/threads_back"
+                app:border_color="#FFFFFF"
+                app:border_width="4dp"
+                app:shadow="true" />
+                 -->
+           
+    <!-- Title -->
+    <TextView
+        android:id="@+id/event_title"
+        android:text="Junaid Ahmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/cir_events_thumb"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+ 
+    <!-- Email -->
+    <TextView
+        android:text="junaid@felicity.iiit.ac.in"
+        android:id="@+id/about_item_email"
+        android:textStyle="italic"
+        android:textColor="#3a3a3a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_title"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/time" />
+    
+    <!-- Phone -->
+    <TextView
+        android:text="+91-9642084724"
+        android:id="@+id/about_item_phone"
+        android:textStyle="italic"
+        android:textColor="#3a3a3a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_title"
+        android:layout_alignParentLeft="true"
+        android:textSize="@dimen/time" />
+        
+</RelativeLayout>
+
+</FrameLayout>
